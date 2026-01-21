@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mim | Gabriela Lima</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#formacao">Formação</a></li>
+            <li><a href="index.html">Portfólio</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section id="sobre" class="about-section anime">
+        
+        <div class="about-text">
+            <h3>Quem sou eu</h3>
+            <h2>Gabriela Lima</h2>
+            <p>
+                Sou uma profissional em transição de carreira, unindo a base analítica do <strong>Direito</strong> à criatividade tecnológica da <strong>Multimédia</strong>. 
+                <br><br>
+                Atualmente, sou Técnica Especialista em Desenvolvimento de Produtos Multimédia pelo <strong>CEARTE Coimbra</strong>. A minha paixão reside na interseção entre o Design Visual e a Tecnologia, focando-me em criar sistemas funcionais, sustentáveis e com uma forte base estratégica.
+            </p>
+
+            <div class="skills-grid">
+                <span class="skill-tag">Adobe Photoshop</span>
+                <span class="skill-tag">Adobe Illustrator</span>
+                <span class="skill-tag">Figma / UI Design</span>
+                <span class="skill-tag">HTML5 & CSS3</span>
+                <span class="skill-tag">PHP & MySQL</span>
+                <span class="skill-tag">Edição de Vídeo</span>
+                <span class="skill-tag">Ecoempreendedorismo</span>
+            </div>
+        </div>
+
+        <div class="about-img">
+            <img src="https://gabrielalima.wuaze.com/imagens/gabriela.jpg" alt="Gabriela Lima" class="about-photo">
+        </div>
+    </section>
+
+    <section id="formacao" class="experience-section anime" style="max-width: 1100px; margin: 0 auto 4rem; padding: 0 5%;">
+        <h2 style="font-size: 2rem; margin-bottom: 2rem; border-bottom: 2px solid #6366f1; display: inline-block;">Percurso Académico</h2>
+        
+        <div class="timeline">
+            <div class="edu-item" style="margin-bottom: 1.5rem;">
+                <strong>CEARTE Coimbra | 2025 – 2026 (Em curso)</strong>
+                <p>Especialização Técnica em Desenvolvimento de Produtos Multimédia (Nível 5) - 1500h</p>
+            </div>
+
+            <div class="edu-item" style="margin-bottom: 1.5rem;">
+                <strong>IEFP Coimbra | 2024 – 2025</strong>
+                <p>Ecoempreendedorismo e Negócios Sustentáveis (Planos de Negócio e Marketing Digital)</p>
+            </div>
+
+            <div class="edu-item" style="margin-bottom: 1.5rem;">
+                <strong>UNIPÊ (Brasil) | 2018</strong>
+                <p>Pós-Graduação em Negociação, Mediação e Arbitragem</p>
+            </div>
+
+            <div class="edu-item" style="margin-bottom: 1.5rem;">
+                <strong>UNIPÊ (Brasil) | 2013 – 2017</strong>
+                <p>Licenciatura em Direito</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Gabriela Lima | Criado com HTML & CSS</p>
+    </footer>
+
+</body>
+</html>
