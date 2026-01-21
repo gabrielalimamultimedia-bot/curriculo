@@ -1,177 +1,150 @@
-/* --- GABRIELA LIMA: CURRÍCULO DARK THEME (Igual ao Portfólio) --- */
-
-/* 1. Variáveis de Cor (A Paleta do Site) */
+/* --- CONFIGURAÇÕES GERAIS --- */
 :root {
-    --bg-color: #050505;       /* Preto Absoluto */
-    --card-bg: #0a0a0a;        /* Fundo dos cartões/tags */
-    --border-color: #222222;   /* Bordas finas */
-    --primary: #9d4edd;        /* Roxo Neon */
-    --text-main: #ededed;      /* Branco Suave (Títulos) */
-    --text-muted: #888888;     /* Cinza (Texto corrido) */
+    --bg-color: #050505;
+    --border-color: #222222;
+    --primary: #9d4edd;
+    --text-main: #ededed;
+    --text-muted: #888888;
 }
 
-/* 2. Reset Básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* 3. Corpo e Fundo */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: var(--bg-color) !important; /* Força o preto */
-    color: var(--text-muted); /* Texto padrão cinza */
+    background-color: var(--bg-color) !important;
+    color: var(--text-muted);
     line-height: 1.6;
-    font-size: 16px;
 }
 
-/* 4. Contentor Principal */
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 60px 20px;
-}
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-/* --- CABEÇALHO (Foto e Nome) --- */
-.header-section {
+/* --- 1. MENU (IGUAL AO SITE: Horizontal e Centrado) --- */
+.main-nav {
     display: flex;
-    gap: 50px;
-    align-items: center;
-    margin-bottom: 60px;
+    justify-content: center; /* Centra os itens */
+    padding: 20px 0;
+    background-color: rgba(5, 5, 5, 0.9);
+    position: sticky; /* Fixo no topo */
+    top: 0;
+    z-index: 1000;
     border-bottom: 1px solid var(--border-color);
+    backdrop-filter: blur(10px);
+    width: 100%;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Espaço entre links */
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.main-nav a:hover { color: var(--primary); }
+
+/* --- 2. CABEÇALHO / SOBRE (IGUAL AO SITE) --- */
+.header-section {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* Texto um pouco maior que a foto */
+    gap: 60px;
+    align-items: center; /* Alinha verticalmente ao centro */
+    margin: 60px 0; /* Espaçamento vertical */
     padding-bottom: 40px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header-text h3 {
+    color: var(--primary);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
 }
 
 .header-text h1 {
     font-size: 3.5rem;
     font-weight: 800;
-    color: var(--text-main); /* Nome em Branco */
+    color: var(--text-main);
     line-height: 1.1;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 .header-text p {
-    color: var(--text-muted); /* Descrição em Cinza */
+    color: var(--text-muted);
     font-size: 1.1rem;
-    max-width: 600px;
+    margin-bottom: 20px;
+    font-weight: 300;
 }
 
-/* Foto de Perfil */
+/* FOTO GRANDE (Sem ser redonda) */
 .profile-img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%; /* Redonda como no site */
-    border: 2px solid var(--border-color);
-    filter: grayscale(100%); /* Preto e Branco */
-    transition: 0.5s;
+    width: 100%;
+    max-width: 450px; /* Tamanho grande */
+    height: auto;
+    object-fit: contain;
+    
+    /* Removemos a borda e o arredondado para parecer "recortada" como no site */
+    border-radius: 12px; 
+    border: none; 
+    filter: none; /* Remove o preto e branco se quiseres igual ao print */
+    
+    display: block;
+    margin: 0 auto;
 }
 
-.profile-img:hover {
-    filter: grayscale(0%); /* Cor ao passar o rato */
-    border-color: var(--primary); /* Borda Roxa */
-    box-shadow: 0 0 30px rgba(157, 78, 221, 0.3); /* Brilho */
-}
-
-/* --- TÍTULOS DAS SECÇÕES --- */
+/* --- RESTO DO SITE (MANTIDO IGUAL) --- */
 h2 {
     font-size: 2rem;
-    color: var(--text-main); /* Título em Branco */
+    color: var(--text-main);
     margin-top: 50px;
     margin-bottom: 25px;
-    
-    /* A Linha Roxa em baixo */
-    border-bottom: 2px solid var(--primary); 
+    border-bottom: 2px solid var(--primary);
     display: inline-block;
     padding-bottom: 5px;
 }
 
-/* SUBTÍTULOS (Design & Web, Dados, etc) */
-h3 {
-    color: var(--primary) !important; /* ROXO FORÇADO */
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 700;
+.skills-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
 }
 
-/* --- TAGS (Competências e Certificações) --- */
-.skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-bottom: 40px;
-}
+h4, h3 { color: var(--primary); margin-bottom: 10px; }
 
-/* Estilo unificado para todas as "caixas" */
-.skill-tag, .cert-item, span.badge {
-    background-color: #111 !important; /* Fundo muito escuro */
-    color: #ccc !important;            /* Texto cinza claro */
-    
+.skills-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+
+.skill-tag, .education-item { color: var(--text-muted); }
+
+.skill-tag {
+    background: #111;
     padding: 8px 16px;
     border-radius: 6px;
+    border: 1px solid var(--border-color);
     font-size: 0.9rem;
-    font-weight: 500;
-    
-    border: 1px solid var(--border-color) !important; /* Borda cinza fina */
-    display: inline-block;
-    transition: 0.3s;
 }
 
-/* Hover nas Tags */
-.skill-tag:hover, .cert-item:hover, span.badge:hover {
-    border-color: var(--primary) !important;
-    color: var(--primary) !important; /* Texto fica roxo */
-    transform: translateY(-2px);
-}
+.education-item strong { color: var(--text-main); display: block; font-size: 1.1rem; }
 
-/* --- FORMAÇÃO ACADÉMICA (Correção do Texto) --- */
-.education-item {
-    margin-bottom: 30px;
-}
-
-/* Nome do Curso/Escola em BRANCO */
-.education-item strong, 
-.education-item h4,
-.education-item b {
-    color: var(--text-main) !important;
-    font-weight: 700;
-    font-size: 1.2rem;
-    display: block;
-    margin-bottom: 5px;
-}
-
-/* Texto descritivo em CINZA */
-.education-item, 
-.education-item p, 
-.education-item span {
-    color: var(--text-muted);
-}
-
-/* --- RESPONSIVIDADE (Mobile) --- */
+/* Mobile */
 @media (max-width: 768px) {
     .header-section {
-        flex-direction: column-reverse; /* Foto em cima */
-        text-align: center;
-        gap: 20px;
-    }
-    
-    .header-text h1 { font-size: 2.5rem; }
-    
-    .skills-wrapper {
+        grid-template-columns: 1fr;
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse; /* Foto em cima no telemóvel */
+        text-align: center;
     }
+    .skills-wrapper { grid-template-columns: 1fr; }
+    .main-nav ul { gap: 15px; font-size: 0.8rem; }
 }
 
-/* --- RODAPÉ --- */
-footer {
-    text-align: center;
-    padding: 60px 0;
-    margin-top: 50px;
-    border-top: 1px solid var(--border-color);
-    color: var(--text-muted);
-    font-size: 0.8rem;
-}
+footer { text-align: center; padding: 50px 0; border-top: 1px solid var(--border-color); font-size: 0.8rem; }
