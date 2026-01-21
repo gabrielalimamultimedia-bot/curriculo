@@ -3,99 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Mim | Gabriela Lima</title>
+    <title>Currículo | Gabriela Lima</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- MENU -->
     <nav class="main-nav">
         <ul>
+            <!-- Links internos da página -->
             <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#formacao">Formação</a></li>
             <li><a href="#competencias">Competências</a></li>
-            <li><a href="index.html">Portfólio</a></li>
+            <li><a href="#formacao">Formação</a></li>
+            <!-- Link para o teu site principal (Substitui pelo teu link real do Wuaze se quiseres) -->
+            <li><a href="https://gabrielalima.wuaze.com" target="_blank">Ver Portfólio Online</a></li>
         </ul>
     </nav>
 
-    <section id="sobre" class="about-section anime">
-        <div class="about-text">
-            <h3>Quem sou eu</h3>
-            <h2>Gabriela Lima</h2>
-            <p>
-                Sou uma profissional em transição de carreira, unindo a base analítica do <strong>Direito</strong> à criatividade tecnológica da <strong>Multimédia</strong>. 
-                <br><br>
-                Atualmente, sou Técnica Especialista em Desenvolvimento de Produtos Multimédia pelo <strong>CEARTE Coimbra</strong>. Foco-me em criar soluções digitais sustentáveis e estratégicas, utilizando a tecnologia para potenciar o design e a gestão.
-            </p>
+    <div class="container">
 
-            <div style="margin-top: 1rem; font-size: 0.9rem; color: #4b5563;">
-                <strong>Idiomas:</strong> Português (Língua Materna) | Inglês (Nível B1)
+        <!-- CABEÇALHO (SOBRE) -->
+        <header id="sobre" class="header-section anime">
+            <div class="header-text">
+                <h1>Gabriela Lima</h1>
+                <p>
+                    Sou uma profissional em transição de carreira, unindo a base analítica do <strong>Direito</strong> à criatividade tecnológica da <strong>Multimédia</strong>.
+                    <br><br>
+                    Atualmente, sou Técnica Especialista em Desenvolvimento de Produtos Multimédia pelo <strong>CEARTE Coimbra</strong>. Foco-me em criar soluções digitais sustentáveis e estratégicas.
+                </p>
+                
+                <!-- Informação extra em roxo -->
+                <small>Idiomas: Português (Nativo) | Inglês (B1)</small>
             </div>
-        </div>
 
-        <div class="about-img">
-            <img src="gabriela.png" alt="Gabriela Lima" class="about-photo">
-        </div>
-    </section>
+            <div class="header-img">
+                <!-- Certifica-te que a imagem gabriela.png existe no GitHub -->
+                <img src="gabriela.png" alt="Gabriela Lima" class="profile-img">
+            </div>
+        </header>
 
-    <section id="competencias" class="anime" style="max-width: 1100px; margin: 0 auto 4rem; padding: 0 5%;">
-        <h2 style="font-size: 2rem; margin-bottom: 2rem; border-bottom: 2px solid #6366f1; display: inline-block;">Principais Competências</h2>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-            <div>
-                <h4 style="color: #6366f1; margin-bottom: 1rem;">Design & Web</h4>
-                <div class="skills-grid">
-                    <span class="skill-tag">UI/UX</span>
-                    <span class="skill-tag">Design Vetorial/Bitmap</span>
-                    <span class="skill-tag">CMS</span>
-                    <span class="skill-tag">HTML/CSS</span>
-                    <span class="skill-tag">Programação Web Avançada</span>
+        <!-- COMPETÊNCIAS -->
+        <section id="competencias" class="anime">
+            <h2>Principais Competências</h2>
+            
+            <div class="skills-wrapper">
+                <!-- Coluna 1 -->
+                <div>
+                    <h3>Design & Web</h3>
+                    <div class="skills-grid">
+                        <span class="skill-tag">UI/UX Design</span>
+                        <span class="skill-tag">Design Vetorial</span>
+                        <span class="skill-tag">Edição Bitmap</span>
+                        <span class="skill-tag">CMS (Wordpress/Wix)</span>
+                        <span class="skill-tag">HTML5 & CSS3</span>
+                    </div>
+                </div>
+
+                <!-- Coluna 2 -->
+                <div>
+                    <h3>Dados & Gestão</h3>
+                    <div class="skills-grid">
+                        <span class="skill-tag">MySQL / Bases de Dados</span>
+                        <span class="skill-tag">Planos de Negócio</span>
+                        <span class="skill-tag">Gestão de Projetos</span>
+                    </div>
+                </div>
+
+                <!-- Coluna 3 -->
+                <div>
+                    <h3>Audiovisual</h3>
+                    <div class="skills-grid">
+                        <span class="skill-tag">Edição de Vídeo</span>
+                        <span class="skill-tag">Pós-produção</span>
+                        <span class="skill-tag">Captação de Som</span>
+                    </div>
+                </div>
+
+                <!-- Coluna 4 -->
+                <div>
+                    <h3>Soft Skills</h3>
+                    <div class="skills-grid">
+                        <span class="skill-tag">Negociação</span>
+                        <span class="skill-tag">RGPD</span>
+                        <span class="skill-tag">Sustentabilidade</span>
+                        <span class="skill-tag">Resolução de Problemas</span>
+                    </div>
                 </div>
             </div>
-            <div>
-                <h4 style="color: #6366f1; margin-bottom: 1rem;">Dados & Gestão</h4>
-                <div class="skills-grid">
-                    <span class="skill-tag">MySQL</span>
-                    <span class="skill-tag">Planos de Negócio</span>
-                    <span class="skill-tag">Gestão de Projetos</span>
-                </div>
-            </div>
-            <div>
-                <h4 style="color: #6366f1; margin-bottom: 1rem;">Audiovisual</h4>
-                <div class="skills-grid">
-                    <span class="skill-tag">Edição Som/Vídeo</span>
-                    <span class="skill-tag">Pós-produção</span>
-                    <span class="skill-tag">Animação 2D</span>
-                </div>
-            </div>
-            <div>
-                <h4 style="color: #6366f1; margin-bottom: 1rem;">Soft Skills</h4>
-                <div class="skills-grid">
-                    <span class="skill-tag">Negociação</span>
-                    <span class="skill-tag">RGPD</span>
-                    <span class="skill-tag">Eco-sustentabilidade</span>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="formacao" class="anime" style="max-width: 1100px; margin: 0 auto 4rem; padding: 0 5%;">
-        <h2 style="font-size: 2rem; margin-bottom: 1.5rem; border-bottom: 2px solid #6366f1; display: inline-block;">Formação Académica</h2>
-        <div class="timeline" style="margin-bottom: 3rem;">
-            <p><strong>CEARTE Coimbra (2025-2026):</strong> Téc. Esp. em Desenvolvimento de Produtos Multimédia (Em curso)</p>
-            <p><strong>IEFP Coimbra (2024-2025):</strong> Ecoempreendedorismo e Negócios Sustentáveis</p>
-            <p><strong>UNIPÊ (Brasil):</strong> Pós-Graduação em Negociação e Licenciatura em Direito</p>
-        </div>
+        <!-- FORMAÇÃO ACADÉMICA -->
+        <section id="formacao" class="anime">
+            <h2>Formação Académica</h2>
+            
+            <!-- Item 1 -->
+            <div class="education-item">
+                <h4>CEARTE Coimbra (2025-2026)</h4>
+                <p>Téc. Esp. em Desenvolvimento de Produtos Multimédia (Em curso)</p>
+            </div>
 
-        <h2>Certificações Digitais</h2>
+            <!-- Item 2 -->
+            <div class="education-item">
+                <h4>IEFP Coimbra (2024-2025)</h4>
+                <p>Ecoempreendedorismo e Negócios Sustentáveis</p>
+            </div>
 
-<div class="skills-grid">
-    <!-- Repara que removi o style="...". Agora ele vai buscar as cores ao CSS. -->
-    <span class="skill-tag">Gestão de Projetos Digitais (2025)</span>
-    <span class="skill-tag">Automatização de Tarefas e Processos (2025)</span>
-    <span class="skill-tag">Ferramentas de Produtividade Digital (2025)</span>
-</div>
-    </section>
+            <!-- Item 3 -->
+            <div class="education-item">
+                <h4>UNIPÊ - Brasil</h4>
+                <p>Pós-Graduação em Negociação e Licenciatura em Direito</p>
+            </div>
+        </section>
+
+        <!-- CERTIFICAÇÕES DIGITAIS -->
+        <section class="anime">
+            <h2>Certificações Digitais</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">Gestão de Projetos Digitais (2025)</span>
+                <span class="skill-tag">Automatização de Tarefas (2025)</span>
+                <span class="skill-tag">Ferramentas de Produtividade (2025)</span>
+            </div>
+        </section>
+
+    </div>
 
     <footer>
         <p>&copy; 2026 Gabriela Lima | Multimédia & Negócios</p>
