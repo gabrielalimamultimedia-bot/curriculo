@@ -1,174 +1,177 @@
-/* --- CONFIGURAÇÕES GERAIS (GABRIELA LIMA DESIGN SYSTEM) --- */
+/* --- GABRIELA LIMA: CURRÍCULO DARK THEME (Igual ao Portfólio) --- */
+
+/* 1. Variáveis de Cor (A Paleta do Site) */
 :root {
     --bg-color: #050505;       /* Preto Absoluto */
-    --card-bg: #0a0a0a;        /* Quase preto */
-    --border-color: #222222;   /* Bordas subtis */
-    --primary: #9d4edd;        /* ROXO NEON (A cor principal) */
-    --text-main: #ededed;      /* Branco Suave */
-    --text-muted: #888888;     /* Cinza Médio */
+    --card-bg: #0a0a0a;        /* Fundo dos cartões/tags */
+    --border-color: #222222;   /* Bordas finas */
+    --primary: #9d4edd;        /* Roxo Neon */
+    --text-main: #ededed;      /* Branco Suave (Títulos) */
+    --text-muted: #888888;     /* Cinza (Texto corrido) */
 }
 
+/* 2. Reset Básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* 3. Corpo e Fundo */
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-color) !important; /* Força o preto */
-    color: var(--text-main);
+    color: var(--text-muted); /* Texto padrão cinza */
     line-height: 1.6;
+    font-size: 16px;
 }
 
-/* --- LAYOUT PRINCIPAL --- */
+/* 4. Contentor Principal */
 .container {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 60px 20px;
 }
 
-/* --- CABEÇALHO (Foto e Intro) --- */
+/* --- CABEÇALHO (Foto e Nome) --- */
 .header-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     gap: 50px;
     align-items: center;
     margin-bottom: 60px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 40px;
 }
 
 .header-text h1 {
     font-size: 3.5rem;
     font-weight: 800;
+    color: var(--text-main); /* Nome em Branco */
     line-height: 1.1;
-    margin-bottom: 20px;
-    color: var(--text-main);
+    margin-bottom: 15px;
 }
 
 .header-text p {
-    color: var(--text-muted);
-    font-size: 1rem;
-    margin-bottom: 20px;
-    font-weight: 300;
+    color: var(--text-muted); /* Descrição em Cinza */
+    font-size: 1.1rem;
+    max-width: 600px;
 }
 
-.header-text small {
-    color: var(--primary); /* Roxo */
-    font-weight: 600;
-    display: block;
-    margin-top: 10px;
-}
-
+/* Foto de Perfil */
 .profile-img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
-    filter: grayscale(100%);
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%; /* Redonda como no site */
+    border: 2px solid var(--border-color);
+    filter: grayscale(100%); /* Preto e Branco */
     transition: 0.5s;
 }
 
 .profile-img:hover {
-    filter: grayscale(0%);
-    border-color: var(--primary);
+    filter: grayscale(0%); /* Cor ao passar o rato */
+    border-color: var(--primary); /* Borda Roxa */
+    box-shadow: 0 0 30px rgba(157, 78, 221, 0.3); /* Brilho */
 }
 
 /* --- TÍTULOS DAS SECÇÕES --- */
 h2 {
     font-size: 2rem;
-    color: var(--text-main);
+    color: var(--text-main); /* Título em Branco */
     margin-top: 50px;
-    margin-bottom: 30px;
-    /* A LINHA ROXA */
+    margin-bottom: 25px;
+    
+    /* A Linha Roxa em baixo */
     border-bottom: 2px solid var(--primary); 
     display: inline-block;
     padding-bottom: 5px;
 }
 
-/* --- COMPETÊNCIAS & DADOS (Grid) --- */
-.skills-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-}
-
-/* SUBTÍTULOS DAS SKILLS (Design & Web, Dados, etc) */
+/* SUBTÍTULOS (Design & Web, Dados, etc) */
 h3 {
-    color: var(--primary); /* ROXO (Antes era azul) */
+    color: var(--primary) !important; /* ROXO FORÇADO */
     font-size: 1.1rem;
     margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    font-weight: 700;
 }
 
-/* TAGS (Skills e Certificações) */
-/* Isto aplica-se tanto às competencias como às certificações */
-.tags-group, .cert-group {
+/* --- TAGS (Competências e Certificações) --- */
+.skills-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
+    margin-bottom: 40px;
 }
 
-.tag-item, .cert-item {
-    background: #111; /* Fundo escuro */
-    color: #ccc;      /* Texto cinza */
+/* Estilo unificado para todas as "caixas" */
+.skill-tag, .cert-item, span.badge {
+    background-color: #111 !important; /* Fundo muito escuro */
+    color: #ccc !important;            /* Texto cinza claro */
+    
     padding: 8px 16px;
     border-radius: 6px;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 500;
-    border: 1px solid var(--border-color); /* Borda fina */
+    
+    border: 1px solid var(--border-color) !important; /* Borda cinza fina */
+    display: inline-block;
     transition: 0.3s;
-    text-decoration: none; /* Caso as certificações tenham links */
-    display: inline-block; /* Garante que não estica */
 }
 
-.tag-item:hover, .cert-item:hover {
-    border-color: var(--primary);
-    color: var(--primary);
+/* Hover nas Tags */
+.skill-tag:hover, .cert-item:hover, span.badge:hover {
+    border-color: var(--primary) !important;
+    color: var(--primary) !important; /* Texto fica roxo */
+    transform: translateY(-2px);
 }
 
-/* --- FORMAÇÃO ACADÉMICA (Correção do Texto Branco) --- */
+/* --- FORMAÇÃO ACADÉMICA (Correção do Texto) --- */
 .education-item {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
-/* A escola e o ano ficam em Branco (Destaque) */
+/* Nome do Curso/Escola em BRANCO */
 .education-item strong, 
-.education-item h4 {
-    color: var(--text-main);
+.education-item h4,
+.education-item b {
+    color: var(--text-main) !important;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     display: block;
     margin-bottom: 5px;
 }
 
-/* O texto descritivo fica CINZA (Igual ao "Sobre") */
+/* Texto descritivo em CINZA */
+.education-item, 
 .education-item p, 
 .education-item span {
-    color: var(--text-muted); /* AQUI ESTÁ A MUDANÇA */
-    font-size: 1rem;
-    font-weight: 300;
-    line-height: 1.5;
+    color: var(--text-muted);
 }
 
-/* --- RESPONSIVO --- */
+/* --- RESPONSIVIDADE (Mobile) --- */
 @media (max-width: 768px) {
     .header-section {
-        grid-template-columns: 1fr;
+        flex-direction: column-reverse; /* Foto em cima */
         text-align: center;
-        display: flex;
-        flex-direction: column-reverse;
+        gap: 20px;
     }
+    
+    .header-text h1 { font-size: 2.5rem; }
+    
     .skills-wrapper {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
     }
 }
 
+/* --- RODAPÉ --- */
 footer {
     text-align: center;
-    padding: 50px 0;
-    color: var(--text-muted);
-    font-size: 0.8rem;
+    padding: 60px 0;
     margin-top: 50px;
     border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: 0.8rem;
 }
