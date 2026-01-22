@@ -135,16 +135,89 @@ h4, h3 { color: var(--primary); margin-bottom: 10px; }
 
 .education-item strong { color: var(--text-main); display: block; font-size: 1.1rem; }
 
-/* Mobile */
-@media (max-width: 768px) {
-    .header-section {
-        grid-template-columns: 1fr;
-        display: flex;
-        flex-direction: column-reverse; /* Foto em cima no telemóvel */
-        text-align: center;
-    }
-    .skills-wrapper { grid-template-columns: 1fr; }
-    .main-nav ul { gap: 15px; font-size: 0.8rem; }
-}
+/* --- RESPONSIVIDADE (AJUSTES PARA TELEMÓVEL) --- */
+@media screen and (max-width: 768px) {
 
-footer { text-align: center; padding: 50px 0; border-top: 1px solid var(--border-color); font-size: 0.8rem; }
+    /* 1. Ajustes Gerais do Contentor */
+    .container {
+        padding: 20px; /* Menos margem lateral para aproveitar o ecrã */
+        width: 100%;
+        overflow-x: hidden; /* Evita scroll lateral acidental */
+    }
+
+    /* 2. Menu de Navegação */
+    .main-nav {
+        padding: 15px 0;
+        position: relative; /* No mobile pode ser melhor não ser fixo se o menu for grande */
+    }
+    
+    .main-nav ul {
+        flex-wrap: wrap; /* Permite que os links fiquem em duas linhas se necessário */
+        justify-content: center;
+        gap: 15px; /* Espaço menor entre links */
+        padding: 0 10px;
+    }
+    
+    .main-nav a {
+        font-size: 0.85rem; /* Letra ligeiramente mais pequena */
+    }
+
+    /* 3. Cabeçalho (Sobre) - Empilhar Verticalmente */
+    .header-section {
+        display: flex;
+        flex-direction: column-reverse; /* Foto em cima, Texto em baixo */
+        gap: 30px;
+        margin: 30px 0;
+        text-align: center; /* Centrar texto */
+        border-bottom: none; /* Remove a linha divisória no mobile se preferires, ou mantém */
+    }
+
+    .header-text h1 {
+        font-size: 2.5rem; /* Nome mais pequeno para caber */
+        line-height: 1.2;
+    }
+
+    .header-text p {
+        font-size: 1rem;
+    }
+
+    /* Foto no Mobile */
+    .profile-img {
+        width: 100%;
+        max-width: 280px; /* Limita o tamanho para não ocupar o ecrã todo */
+        height: auto;
+        margin: 0 auto; /* Centrar a imagem */
+    }
+
+    /* 4. Competências e Formação - Uma Coluna */
+    .skills-wrapper {
+        grid-template-columns: 1fr; /* Força uma única coluna */
+        gap: 40px;
+        text-align: center; /* Centra os títulos das skills */
+    }
+
+    /* Centrar as Tags (Skills) */
+    .skills-grid {
+        justify-content: center;
+    }
+
+    /* 5. Títulos das Secções */
+    h2 {
+        font-size: 1.8rem;
+        margin-top: 40px;
+        text-align: center;
+        display: block; /* Garante que ocupa a largura para centrar */
+        border-bottom: 2px solid var(--primary); /* Mantém a linha roxa */
+        width: fit-content; /* A linha fica do tamanho do texto */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Ajuste fino para a formação */
+    .education-item {
+        text-align: center;
+        padding: 10px;
+        background: rgba(255,255,255,0.02); /* Fundo muito subtil para separar */
+        border-radius: 8px;
+    }
+}
