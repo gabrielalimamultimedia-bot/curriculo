@@ -18,31 +18,31 @@ body {
 
 .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-/* --- 1. MENU (IGUAL AO SITE: Horizontal e Centrado) --- */
+/* --- NAVEGAÇÃO (Igual ao Site Principal) --- */
 .main-nav {
     display: flex;
-    justify-content: center; /* Centra os itens */
+    justify-content: center; /* Centra os botões */
     padding: 20px 0;
-    background-color: rgba(5, 5, 5, 0.9);
-    position: sticky; /* Fixo no topo */
+    background-color: rgba(5, 5, 5, 0.9); /* Fundo preto transparente */
+    position: sticky; /* Cola no topo */
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid var(--border-color);
-    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color); /* Linha fina em baixo */
+    backdrop-filter: blur(10px); /* Efeito de vidro */
     width: 100%;
 }
 
 .main-nav ul {
     list-style: none;
     display: flex;
-    gap: 30px; /* Espaço entre links */
+    gap: 30px; /* Espaço entre as palavras */
     padding: 0;
     margin: 0;
 }
 
 .main-nav a {
     text-decoration: none;
-    color: var(--text-muted);
+    color: var(--text-muted); /* Cor Cinza */
     font-size: 0.95rem;
     font-weight: 500;
     text-transform: uppercase;
@@ -50,7 +50,22 @@ body {
     transition: 0.3s;
 }
 
-.main-nav a:hover { color: var(--primary); }
+/* Quando passa o rato OU quando é a página atual */
+.main-nav a:hover, 
+.main-nav a.current {
+    color: var(--primary); /* Fica ROXO */
+    text-shadow: 0 0 10px rgba(157, 78, 221, 0.4); /* Brilho Neon */
+}
+
+/* Ajuste para telemóvel */
+@media (max-width: 768px) {
+    .main-nav ul {
+        gap: 15px;
+        font-size: 0.8rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
 
 /* --- 2. CABEÇALHO / SOBRE (IGUAL AO SITE) --- */
 .header-section {
