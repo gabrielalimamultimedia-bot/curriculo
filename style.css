@@ -1,8 +1,8 @@
 /* --- CONFIGURAÇÕES GERAIS --- */
 :root {
     --bg-color: #050505;
-    --border-color: #222222;
-    --primary: #9d4edd;
+    --border-color: #474747; /* Cinza Escuro da Marca */
+    --primary: #a6d16a;      /* Verde Oficial da Marca */
     --text-main: #ededed;
     --text-muted: #888888;
 }
@@ -10,7 +10,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Outfit', sans-serif; /* Tipografia Oficial */
     background-color: var(--bg-color) !important;
     color: var(--text-muted);
     line-height: 1.6;
@@ -27,7 +27,7 @@ body {
     position: sticky; /* Cola no topo */
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid var(--border-color); /* Linha fina em baixo */
+    border-bottom: 1px solid var(--border-color); /* Linha fina em baixo com o cinza oficial */
     backdrop-filter: blur(10px); /* Efeito de vidro */
     width: 100%;
 }
@@ -53,8 +53,8 @@ body {
 /* Quando passa o rato OU quando é a página atual */
 .main-nav a:hover, 
 .main-nav a.current {
-    color: var(--primary); /* Fica ROXO */
-    text-shadow: 0 0 10px rgba(157, 78, 221, 0.4); /* Brilho Neon */
+    color: var(--primary); /* Fica VERDE */
+    text-shadow: 0 0 10px rgba(166, 209, 106, 0.4); /* Brilho Neon Verde */
 }
 
 /* Ajuste para telemóvel */
@@ -79,7 +79,7 @@ body {
 }
 
 .header-text h3 {
-    color: var(--primary);
+    color: var(--primary); /* Verde */
     font-size: 1.1rem;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -123,7 +123,7 @@ h2 {
     color: var(--text-main);
     margin-top: 50px;
     margin-bottom: 25px;
-    border-bottom: 2px solid var(--primary);
+    border-bottom: 2px solid var(--primary); /* Linha divisória verde */
     display: inline-block;
     padding-bottom: 5px;
 }
@@ -146,6 +146,14 @@ h4, h3 { color: var(--primary); margin-bottom: 10px; }
     border-radius: 6px;
     border: 1px solid var(--border-color);
     font-size: 0.9rem;
+    transition: 0.3s ease; /* Adicionado transição suave */
+}
+
+/* Efeito extra sugerido: hover nas skills tag para brilho verde */
+.skill-tag:hover {
+    border-color: var(--primary);
+    box-shadow: 0 0 10px rgba(166, 209, 106, 0.2);
+    color: var(--primary);
 }
 
 .education-item strong { color: var(--text-main); display: block; font-size: 1.1rem; }
@@ -222,7 +230,7 @@ h4, h3 { color: var(--primary); margin-bottom: 10px; }
         margin-top: 40px;
         text-align: center;
         display: block; /* Garante que ocupa a largura para centrar */
-        border-bottom: 2px solid var(--primary); /* Mantém a linha roxa */
+        border-bottom: 2px solid var(--primary); /* Mantém a linha verde */
         width: fit-content; /* A linha fica do tamanho do texto */
         margin-left: auto;
         margin-right: auto;
